@@ -17,6 +17,10 @@
     "jsx": "react-jsx",
     "strict": true,
 
+    "paths": {
+      "@gator/elements": ["./node_modules/@gator/elements/src/index.ts"]
+    },
+
     /* Linting */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
