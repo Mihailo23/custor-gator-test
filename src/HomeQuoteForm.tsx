@@ -8,6 +8,7 @@ export function HomeQuoteForm() {
   const [year, setYear] = useState("1978");
   const [area, setArea] = useState("68");
   const [floor, setFloor] = useState("4");
+  const [rooms, setRooms] = useState("3");
   const [note, setNote] = useState<string | null>(null);
 
   function onSubmit(e: FormEvent) {
@@ -77,6 +78,15 @@ export function HomeQuoteForm() {
             onChange={setFloor}
           />
         ) : null}
+        <TextField
+          id="rooms"
+          label="Rooms"
+          type="number"
+          min={1}
+          max={20}
+          value={rooms}
+          onChange={setRooms}
+        />
         <Button type="submit">Get quote</Button>
         {note ? <p className={styles.note}>{note}</p> : null}
       </form>

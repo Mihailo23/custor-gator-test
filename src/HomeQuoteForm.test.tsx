@@ -22,4 +22,13 @@ describe("HomeQuoteForm", () => {
     await user.click(screen.getByRole("button", { name: "Apartment" }));
     expect(screen.getByLabelText("Floor")).toBeInTheDocument();
   });
+
+  it("shows Rooms for Apartment and House", async () => {
+    const user = userEvent.setup();
+    render(<HomeQuoteForm />);
+    expect(screen.getByLabelText("Rooms")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "House" }));
+    expect(screen.getByLabelText("Rooms")).toBeInTheDocument();
+    expect(screen.queryByLabelText("Floor")).not.toBeInTheDocument();
+  });
 });
