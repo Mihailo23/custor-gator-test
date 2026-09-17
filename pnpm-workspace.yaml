@@ -1,3 +1,5 @@
+allowBuilds:
+  "@gator/elements@https://codeload.github.com/Mihailo23/gator-elements/tar.gz/fdcd6d22eb65dffe74330fbbee04d278db2e1238": true
 catalog:
   vite: npm:@voidzero-dev/vite-plus-core@0.3.2
   vite-plus: 0.3.2
