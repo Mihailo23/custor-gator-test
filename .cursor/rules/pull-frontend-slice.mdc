@@ -1,0 +1,12 @@
+---
+description: Pull gator-frontend slices into this host on demand
+alwaysApply: true
+---
+
+# Pull a frontend slice
+
+Clone-only host. Kit comes from GitHub. Product UI does not live on `main`.
+
+On "pull the quote form" (or any slice): branch `experiment/<slug>`; fetch that component plus local import closure from `Mihailo23/gator-frontend` on GitHub into `src/playground/`; add `entry.tsx`; point `App.tsx` at it; `vp dev`; open the Cursor browser. Stop and ask if the import graph is huge.
+
+When done: write `docs/experiments/<yyyy-mm-dd>-<slug>.md`; open a review-only experiment PR (UI + writeup); merge to `main` **docs-only**. Never leave playground `.tsx`/`.css` on `main`.
