@@ -179,8 +179,8 @@ importers:
   .:
     dependencies:
       '@gator/elements':
-        specifier: file:../gator-elements
-        version: file:../gator-elements(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: github:Mihailo23/gator-elements
+        version: https://codeload.github.com/Mihailo23/gator-elements/tar.gz/fdcd6d22eb65dffe74330fbbee04d278db2e1238(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       react:
         specifier: 19.2.8
         version: 19.2.8
@@ -302,8 +302,9 @@ packages:
       '@noble/hashes':
         optional: true
 
-  '@gator/elements@file:../gator-elements':
-    resolution: {directory: ../gator-elements, type: directory}
+  '@gator/elements@https://codeload.github.com/Mihailo23/gator-elements/tar.gz/fdcd6d22eb65dffe74330fbbee04d278db2e1238':
+    resolution: {gitHosted: true, integrity: sha512-yJL3+2QbDNl03IdQVcZszPOaooicl+M1ofQ7iOSnc300d3A83OE3exn3lbzAHcJjJnKBCC9LBzJ9Xy1pngD4BQ==, tarball: https://codeload.github.com/Mihailo23/gator-elements/tar.gz/fdcd6d22eb65dffe74330fbbee04d278db2e1238}
+    version: 0.0.0
     peerDependencies:
       react: ^19.2.0
       react-dom: ^19.2.0
@@ -1502,7 +1503,7 @@ snapshots:
 
   '@exodus/bytes@1.15.1': {}
 
-  '@gator/elements@file:../gator-elements(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@gator/elements@https://codeload.github.com/Mihailo23/gator-elements/tar.gz/fdcd6d22eb65dffe74330fbbee04d278db2e1238(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       react: 19.2.8
       react-dom: 19.2.8(react@19.2.8)
