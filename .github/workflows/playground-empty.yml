@@ -1,0 +1,12 @@
+name: playground-empty
+on:
+  push:
+    branches: [main]
+jobs:
+  playground:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: src/playground contains only .gitkeep
+        run: |
+          test "$(ls -A src/playground | sort | tr '\n' ' ')" = ".gitkeep "
